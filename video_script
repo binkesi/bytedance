@@ -1,0 +1,21 @@
+Lenovo Open Cloud Automation (LOC A) are Lenovo next generation software stack for 
+simplifying Cloud and Data Center Infrastructure Deployment & Management.
+[need a frame of graph]
+(LOC Automation for VCF) based flavors. LOC A provides RedHat OpenShift Container
+Platform one click auto deployment from scratch by following pre defined HW
+configurations and pre defined deployment workflow.
+LOC-A uses ansible and AW X tool to perform auto deployment of multiple platforms.
+Platform configurations/resources are stored in Netbox tool or configuration files. Lenovo
+confluent are a discovery engine to find resources on site. Lenovo XClarity and PXE servers
+are used for Hard ware management, firmware upgrade, and OS deployment. Nginx/Apache
+server manage VM images. Quay/Harbor manage container images.
+
+Let me introduce the auto-deployment process of our product.
+First we should gather information of hardware and software.
+Using them to create configuration files and put them on bootstrap node.
+Here are the examples.
+File "rh_user_requirement.conf" is used for customer.
+He just need to complete basic information of hardware like "node number" of 
+virtualizaiton platform and ocp cluster, "node type" -- virtual or baremetal, etc.
+Professional engineer should take care of other configuration files.
+He may use default values provided in these files or modify
